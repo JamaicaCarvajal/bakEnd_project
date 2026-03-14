@@ -1,0 +1,9 @@
+{
+  "/main/ManagerUsers/page": "app/main/ManagerUsers/page.js",
+  "/main/Students/page": "app/main/Students/page.js",
+  "/main/Teacher/page": "app/main/Teacher/page.js",
+  "/main/curseManagement/page": "app/main/curseManagement/page.js",
+  "/main/dashboard/page": "app/main/dashboard/page.js",
+  "/main/groups/page": "app/main/groups/page.js",
+  "/page": "app/page.js"
+}

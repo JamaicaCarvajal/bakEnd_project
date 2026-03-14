@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/migad/Desktop/backProyect/src/app/main/dashboard/page.tsx"],"sourcesContent":["\"use client\";\r\n\r\nimport { motion } from \"framer-motion\";\r\n\r\nexport default function Dashboard() {\r\n  \r\n  return (\r\n    <motion.div \r\n      initial={{ opacity: 0, y: 20 }}\r\n      animate={{ opacity: 1, y: 0 }}\r\n      transition={{ duration: 0.5 }}\r\n      className=\"w-full bg-putty-50 p-8\"\r\n    >\r\n      \r\n    </motion.div>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;AAEA;AAFA;;;AAIe,SAAS;IAEtB,qBACE,6LAAC,uMAAM,CAAC,GAAG;QACT,SAAS;YAAE,SAAS;YAAG,GAAG;QAAG;QAC7B,SAAS;YAAE,SAAS;YAAG,GAAG;QAAE;QAC5B,YAAY;YAAE,UAAU;QAAI;QAC5B,WAAU;;;;;;AAKhB;KAZwB","debugId":null}}]
+}
