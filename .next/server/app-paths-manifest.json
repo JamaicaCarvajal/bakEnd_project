@@ -1,5 +1,4 @@
 {
-  "/main/ManagerUsers/page": "app/main/ManagerUsers/page.js",
   "/main/Students/page": "app/main/Students/page.js",
   "/main/Teacher/page": "app/main/Teacher/page.js",
   "/main/curseManagement/page": "app/main/curseManagement/page.js",
