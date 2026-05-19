@@ -50,7 +50,7 @@ export const addAuthUser = async (email: string, password: string): Promise<{ su
       password,
       email_confirm: true
     });
-
+    console.log('addAuthUser response:', { data, error });
     if (error) {
       console.error('Error adding auth user:', error);
       return { success: false, error: error.message };

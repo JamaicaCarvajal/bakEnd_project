@@ -56,11 +56,15 @@ export default function GroupFormEdit({
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
     const { name, value } = e.target;
-    const updatedData: DataUsers = { ...formData, [name]: value } as DataUsers;
-    setFormData(updatedData);
-    onChange?.(updatedData);
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+    onChange?.({
+      ...formData,
+      [name]: value,
+    });
   };
-
 
   return (
     <div className=" flex  gap-x-10 gap-y-6 text-[#0C2340] text-sm ">

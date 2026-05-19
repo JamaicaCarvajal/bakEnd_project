@@ -26,7 +26,8 @@ export default function CourseFormEdit({
   });
   const [label, setLabel] = useState("");
 
-  useEffect(() => {
+ 
+ useEffect(() => {
     switch (type) {
       case "new":
         setLabel("Crear");
@@ -57,7 +58,8 @@ export default function CourseFormEdit({
         setLabel("Copiar");
         break;
     }
-  }, [data, type]);
+  }, []);
+
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>

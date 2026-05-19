@@ -63,7 +63,7 @@ export default function AuthUserForm({
         setLabel("Eliminar Usuario");
         break;
     }
-  }, [type, data]);
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
