@@ -1,7 +1,16 @@
 {
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/cron/check-reminders/route": "app/api/cron/check-reminders/route.js",
+  "/api/test-email/route": "app/api/test-email/route.js",
   "/enrollment/page": "app/enrollment/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/main/ManagerUsers/page": "app/main/ManagerUsers/page.js",
   "/main/Students/page": "app/main/Students/page.js",
+  "/main/Teacher/page": "app/main/Teacher/page.js",
+  "/main/admin-setup/page": "app/main/admin-setup/page.js",
   "/main/curseManagement/page": "app/main/curseManagement/page.js",
   "/main/dashboard/page": "app/main/dashboard/page.js",
-  "/main/groups/page": "app/main/groups/page.js"
+  "/main/groups/page": "app/main/groups/page.js",
+  "/page": "app/page.js"
 }

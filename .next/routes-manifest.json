@@ -1,1 +1,164 @@
-{"version":3,"caseSensitive":false,"basePath":"","rewrites":{"beforeFiles":[],"afterFiles":[],"fallback":[]},"redirects":[{"source":"/:path+/","destination":"/:path+","permanent":true,"internal":true,"regex":"^(?:\\/((?:[^\\/]+?)(?:\\/(?:[^\\/]+?))*))\\/$"}],"headers":[{"source":"/:path*","headers":[{"key":"X-DNS-Prefetch-Control","value":"on"},{"key":"Strict-Transport-Security","value":"max-age=63072000; includeSubDomains; preload"},{"key":"X-Frame-Options","value":"SAMEORIGIN"},{"key":"X-Content-Type-Options","value":"nosniff"},{"key":"Referrer-Policy","value":"origin-when-cross-origin"},{"key":"Permissions-Policy","value":"camera=(), microphone=(), geolocation=()"},{"key":"Content-Security-Policy","value":"default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://*.supabase.co"}],"regex":"^(?:\\/((?:[^\\/]+?)(?:\\/(?:[^\\/]+?))*))?(?:\\/)?$"}]}
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "app",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/:path*",
+      "headers": [
+        {
+          "key": "X-DNS-Prefetch-Control",
+          "value": "on"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        },
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://*.supabase.co"
+        }
+      ],
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))?(?:/)?$"
+    }
+  ],
+  "onMatchHeaders": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/api/cron/check-reminders",
+      "regex": "^/api/cron/check\\-reminders(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/cron/check\\-reminders(?:/)?$"
+    },
+    {
+      "page": "/api/test-email",
+      "regex": "^/api/test\\-email(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/test\\-email(?:/)?$"
+    },
+    {
+      "page": "/enrollment",
+      "regex": "^/enrollment(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/enrollment(?:/)?$"
+    },
+    {
+      "page": "/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/main/admin-setup",
+      "regex": "^/main/admin\\-setup(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/main/admin\\-setup(?:/)?$"
+    },
+    {
+      "page": "/main/curseManagement",
+      "regex": "^/main/curseManagement(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/main/curseManagement(?:/)?$"
+    },
+    {
+      "page": "/main/dashboard",
+      "regex": "^/main/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/main/dashboard(?:/)?$"
+    },
+    {
+      "page": "/main/groups",
+      "regex": "^/main/groups(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/main/groups(?:/)?$"
+    },
+    {
+      "page": "/main/ManagerUsers",
+      "regex": "^/main/ManagerUsers(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/main/ManagerUsers(?:/)?$"
+    },
+    {
+      "page": "/main/Students",
+      "regex": "^/main/Students(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/main/Students(?:/)?$"
+    },
+    {
+      "page": "/main/Teacher",
+      "regex": "^/main/Teacher(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/main/Teacher(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

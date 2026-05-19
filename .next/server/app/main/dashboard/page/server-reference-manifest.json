@@ -1,31 +1,25 @@
 {
   "node": {
-    "7fd010c3a22d68f09dda2b6272f411f49e944a1968": {
+    "00c7900537d5770bc4f7bab9064666ff88859deef4": {
       "workers": {
         "app/main/dashboard/page": {
-          "moduleId": "[project]/.next-internal/server/app/main/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/dashboardActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "moduleId": 46061,
           "async": false,
           "exportedName": "fetchAllDashboardData",
           "filename": "src/app/supabase/dashboardActions.ts"
         }
       },
-      "layer": {
-        "app/main/dashboard/page": "action-browser"
-      },
       "exportedName": "fetchAllDashboardData",
       "filename": "src/app/supabase/dashboardActions.ts"
     },
-    "7f8ae984ea225d84f68eb227f4dc1712023661609e": {
+    "404753d894bc953bc3de803f6ba8ec41ff55930df4": {
       "workers": {
         "app/main/dashboard/page": {
-          "moduleId": "[project]/.next-internal/server/app/main/dashboard/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/dashboardActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "moduleId": 46061,
           "async": false,
           "exportedName": "fetchGroupDetails",
           "filename": "src/app/supabase/dashboardActions.ts"
         }
-      },
-      "layer": {
-        "app/main/dashboard/page": "action-browser"
       },
       "exportedName": "fetchGroupDetails",
       "filename": "src/app/supabase/dashboardActions.ts"

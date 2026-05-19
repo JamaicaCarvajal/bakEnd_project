@@ -1,61 +1,49 @@
 {
   "node": {
-    "7f1526a1b35c3fe456299cfd08e1408ecff34c116a": {
+    "000a92579a5c99866db4ac3b8c3437281c88855c42": {
       "workers": {
         "app/main/Students/page": {
-          "moduleId": "[project]/.next-internal/server/app/main/Students/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/studentActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "moduleId": 41667,
           "async": false,
           "exportedName": "fetchStudents",
           "filename": "src/app/supabase/studentActions.ts"
         }
       },
-      "layer": {
-        "app/main/Students/page": "action-browser"
-      },
       "exportedName": "fetchStudents",
       "filename": "src/app/supabase/studentActions.ts"
     },
-    "7f23b85d74c85afc91a242798f9bf534acd0bc0501": {
+    "405e23fbd1b99ee988a86e19f4f9eec66aef2b1626": {
       "workers": {
         "app/main/Students/page": {
-          "moduleId": "[project]/.next-internal/server/app/main/Students/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/studentActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "moduleId": 41667,
           "async": false,
           "exportedName": "addStudent",
           "filename": "src/app/supabase/studentActions.ts"
         }
       },
-      "layer": {
-        "app/main/Students/page": "action-browser"
-      },
       "exportedName": "addStudent",
       "filename": "src/app/supabase/studentActions.ts"
     },
-    "7f1452c79e4699996b62cc87607ea1ef543f3efd13": {
+    "4006af084e8ceb0f38928f63aa26d18a190a051aa1": {
       "workers": {
         "app/main/Students/page": {
-          "moduleId": "[project]/.next-internal/server/app/main/Students/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/studentActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "moduleId": 41667,
           "async": false,
           "exportedName": "updateStudent",
           "filename": "src/app/supabase/studentActions.ts"
         }
       },
-      "layer": {
-        "app/main/Students/page": "action-browser"
-      },
       "exportedName": "updateStudent",
       "filename": "src/app/supabase/studentActions.ts"
     },
-    "7fdfa3e82366ad8d8b3dcc0facfc227275ce789a12": {
+    "408710b2d6721aa1cb24948a0a47187bfb102bc269": {
       "workers": {
         "app/main/Students/page": {
-          "moduleId": "[project]/.next-internal/server/app/main/Students/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/studentActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "moduleId": 41667,
           "async": false,
           "exportedName": "deleteStudent",
           "filename": "src/app/supabase/studentActions.ts"
         }
-      },
-      "layer": {
-        "app/main/Students/page": "action-browser"
       },
       "exportedName": "deleteStudent",
       "filename": "src/app/supabase/studentActions.ts"
