@@ -1,4 +1,215 @@
 {
-  "node": {},
+  "node": {
+    "7f8af6e69c09ae1b5f40cebc8ed155614521008f2b": {
+      "workers": {
+        "app/main/groups/page": {
+          "moduleId": "[project]/.next-internal/server/app/main/groups/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/classGroupActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/supabase/courseActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/app/supabase/teacherActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/app/supabase/dashboardActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "fetchClassGroups",
+          "filename": "src/app/supabase/classGroupActions.ts"
+        }
+      },
+      "layer": {
+        "app/main/groups/page": "action-browser"
+      },
+      "exportedName": "fetchClassGroups",
+      "filename": "src/app/supabase/classGroupActions.ts"
+    },
+    "7fddb01b155ac380a9718dcd8765913577c03fe067": {
+      "workers": {
+        "app/main/groups/page": {
+          "moduleId": "[project]/.next-internal/server/app/main/groups/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/classGroupActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/supabase/courseActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/app/supabase/teacherActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/app/supabase/dashboardActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "addClassGroup",
+          "filename": "src/app/supabase/classGroupActions.ts"
+        }
+      },
+      "layer": {
+        "app/main/groups/page": "action-browser"
+      },
+      "exportedName": "addClassGroup",
+      "filename": "src/app/supabase/classGroupActions.ts"
+    },
+    "7fade47bb651a503c2627105e7be6cc5277df99626": {
+      "workers": {
+        "app/main/groups/page": {
+          "moduleId": "[project]/.next-internal/server/app/main/groups/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/classGroupActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/supabase/courseActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/app/supabase/teacherActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/app/supabase/dashboardActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "updateClassGroup",
+          "filename": "src/app/supabase/classGroupActions.ts"
+        }
+      },
+      "layer": {
+        "app/main/groups/page": "action-browser"
+      },
+      "exportedName": "updateClassGroup",
+      "filename": "src/app/supabase/classGroupActions.ts"
+    },
+    "7f2c8278dd45d0b9b89ce497d8c392f5ba4d85b676": {
+      "workers": {
+        "app/main/groups/page": {
+          "moduleId": "[project]/.next-internal/server/app/main/groups/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/classGroupActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/supabase/courseActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/app/supabase/teacherActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/app/supabase/dashboardActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "deleteClassGroup",
+          "filename": "src/app/supabase/classGroupActions.ts"
+        }
+      },
+      "layer": {
+        "app/main/groups/page": "action-browser"
+      },
+      "exportedName": "deleteClassGroup",
+      "filename": "src/app/supabase/classGroupActions.ts"
+    },
+    "7fdcba0030570edd7bb3d0ca4d16022a7edd1f383e": {
+      "workers": {
+        "app/main/groups/page": {
+          "moduleId": "[project]/.next-internal/server/app/main/groups/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/classGroupActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/supabase/courseActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/app/supabase/teacherActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/app/supabase/dashboardActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "fetchCourses",
+          "filename": "src/app/supabase/courseActions.ts"
+        }
+      },
+      "layer": {
+        "app/main/groups/page": "action-browser"
+      },
+      "exportedName": "fetchCourses",
+      "filename": "src/app/supabase/courseActions.ts"
+    },
+    "7f813769764e65816bd47e486df62479d1a627d93f": {
+      "workers": {
+        "app/main/groups/page": {
+          "moduleId": "[project]/.next-internal/server/app/main/groups/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/classGroupActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/supabase/courseActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/app/supabase/teacherActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/app/supabase/dashboardActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "fetchTeachers",
+          "filename": "src/app/supabase/teacherActions.ts"
+        }
+      },
+      "layer": {
+        "app/main/groups/page": "action-browser"
+      },
+      "exportedName": "fetchTeachers",
+      "filename": "src/app/supabase/teacherActions.ts"
+    },
+    "7f79733492651b91a88d1b26186854cff62bf56abc": {
+      "workers": {
+        "app/main/groups/page": {
+          "moduleId": "[project]/.next-internal/server/app/main/groups/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/classGroupActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/supabase/courseActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/app/supabase/teacherActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/app/supabase/dashboardActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "fetchDashboardStats",
+          "filename": "src/app/supabase/dashboardActions.ts"
+        }
+      },
+      "layer": {
+        "app/main/groups/page": "action-browser"
+      },
+      "exportedName": "fetchDashboardStats",
+      "filename": "src/app/supabase/dashboardActions.ts"
+    },
+    "7f3ec7423d7ba89328fc9e944e50d489ade1d4e62b": {
+      "workers": {
+        "app/main/groups/page": {
+          "moduleId": "[project]/.next-internal/server/app/main/groups/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/classGroupActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/supabase/courseActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/app/supabase/teacherActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/app/supabase/dashboardActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "fetchGroupStats",
+          "filename": "src/app/supabase/dashboardActions.ts"
+        }
+      },
+      "layer": {
+        "app/main/groups/page": "action-browser"
+      },
+      "exportedName": "fetchGroupStats",
+      "filename": "src/app/supabase/dashboardActions.ts"
+    },
+    "7f9d3f49a419ff8a857ad2355234bd814f3939aff5": {
+      "workers": {
+        "app/main/groups/page": {
+          "moduleId": "[project]/.next-internal/server/app/main/groups/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/classGroupActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/supabase/courseActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/app/supabase/teacherActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/app/supabase/dashboardActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "fetchEnrollmentTrends",
+          "filename": "src/app/supabase/dashboardActions.ts"
+        }
+      },
+      "layer": {
+        "app/main/groups/page": "action-browser"
+      },
+      "exportedName": "fetchEnrollmentTrends",
+      "filename": "src/app/supabase/dashboardActions.ts"
+    },
+    "7f7d4b6354569f9e5b3dbc91a31970394bd2611bbd": {
+      "workers": {
+        "app/main/groups/page": {
+          "moduleId": "[project]/.next-internal/server/app/main/groups/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/classGroupActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/supabase/courseActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/app/supabase/teacherActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/app/supabase/dashboardActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "fetchCourseDistribution",
+          "filename": "src/app/supabase/dashboardActions.ts"
+        }
+      },
+      "layer": {
+        "app/main/groups/page": "action-browser"
+      },
+      "exportedName": "fetchCourseDistribution",
+      "filename": "src/app/supabase/dashboardActions.ts"
+    },
+    "7f8184f76e2919f0b8f99aa88b7624988c35fadff1": {
+      "workers": {
+        "app/main/groups/page": {
+          "moduleId": "[project]/.next-internal/server/app/main/groups/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/classGroupActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/supabase/courseActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/app/supabase/teacherActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/app/supabase/dashboardActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "fetchRecentActivity",
+          "filename": "src/app/supabase/dashboardActions.ts"
+        }
+      },
+      "layer": {
+        "app/main/groups/page": "action-browser"
+      },
+      "exportedName": "fetchRecentActivity",
+      "filename": "src/app/supabase/dashboardActions.ts"
+    },
+    "7f8ae984ea225d84f68eb227f4dc1712023661609e": {
+      "workers": {
+        "app/main/groups/page": {
+          "moduleId": "[project]/.next-internal/server/app/main/groups/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/classGroupActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/supabase/courseActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/app/supabase/teacherActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/app/supabase/dashboardActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "fetchGroupDetails",
+          "filename": "src/app/supabase/dashboardActions.ts"
+        }
+      },
+      "layer": {
+        "app/main/groups/page": "action-browser"
+      },
+      "exportedName": "fetchGroupDetails",
+      "filename": "src/app/supabase/dashboardActions.ts"
+    },
+    "7fa116c3df7da08b1aecfe692eb27566863f6d909d": {
+      "workers": {
+        "app/main/groups/page": {
+          "moduleId": "[project]/.next-internal/server/app/main/groups/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/classGroupActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/supabase/courseActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/app/supabase/teacherActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/app/supabase/dashboardActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "checkAndSendCourseReminders",
+          "filename": "src/app/supabase/dashboardActions.ts"
+        }
+      },
+      "layer": {
+        "app/main/groups/page": "action-browser"
+      },
+      "exportedName": "checkAndSendCourseReminders",
+      "filename": "src/app/supabase/dashboardActions.ts"
+    },
+    "7fd010c3a22d68f09dda2b6272f411f49e944a1968": {
+      "workers": {
+        "app/main/groups/page": {
+          "moduleId": "[project]/.next-internal/server/app/main/groups/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/classGroupActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE1 => \"[project]/src/app/supabase/courseActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE2 => \"[project]/src/app/supabase/teacherActions.ts [app-rsc] (ecmascript)\", ACTIONS_MODULE3 => \"[project]/src/app/supabase/dashboardActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "fetchAllDashboardData",
+          "filename": "src/app/supabase/dashboardActions.ts"
+        }
+      },
+      "layer": {
+        "app/main/groups/page": "action-browser"
+      },
+      "exportedName": "fetchAllDashboardData",
+      "filename": "src/app/supabase/dashboardActions.ts"
+    }
+  },
   "edge": {}
 }

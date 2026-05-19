@@ -8,13 +8,20 @@ import Modal from "@/app/components/Modal";
 import SearchBar from "@/app/components/SearchBar";
 import ReloadButton from "@/app/components/ReloadButton";
 import PlusButton from "@/app/components/PlusButton";
-
+import { 
+  fetchAuthUsers, 
+  addAuthUser, 
+  updateAuthUserPassword, 
+  deleteAuthUser,
+  AuthUser 
+} from "@/app/supabase/authUserActions";
 
 export default function Home() {
   const [isModalOpenEdit, setIsModalOpenEdit] = useState(false);
   const [typeOfModal, setTypeOfModal] = useState("");
   const [functionToExecute, setFunctionToExecute] = useState<(info: AuthUserData) => void>(() => () => {});
-  
+  const [rows, setRows] = useState<AuthUser[]>([]);
+  const [filteredRows, setFilteredRows] = useState<AuthUser[]>([]);
   const [actualInfo, setActualInfo] = useState<AuthUserData>({ 
     id: "", 
     email: "", 
@@ -27,7 +34,9 @@ export default function Home() {
     setLoading(true);
     setError(null);
     try {
-     
+      const data = await fetchAuthUsers();
+      setRows(data);
+      setFilteredRows(data);
     } catch (err) {
       setError('Error al cargar usuarios');
       console.error(err);
@@ -40,7 +49,16 @@ export default function Home() {
     loadUsers();
   }, []);
 
- 
+  const handleInfoToModal = (user: AuthUser) => {
+    setActualInfo({
+      id: user.id,
+      email: user.email,
+      created_at: user.created_at,
+      last_sign_in_at: user.last_sign_in_at,
+      email_confirmed_at: user.email_confirmed_at,
+      password: ""
+    });
+  };
 
   const handleOpenModal = (action: boolean, type: string) => {
     setTypeOfModal(type);
@@ -57,13 +75,16 @@ export default function Home() {
           }
           
           setLoading(true);
-        
+          const result = await addAuthUser(info.email, info.password);
           setLoading(false);
           
-        
-        
+          if (result.success) {
+            await loadUsers();
+            setIsModalOpenEdit(false);
+          } else {
+            setError(result.error || 'Error al crear usuario');
           }
-        );
+        });
         break;
         
       case 'edit':
@@ -74,16 +95,30 @@ export default function Home() {
           }
           
           setLoading(true);
-        
+          const result = await updateAuthUserPassword(info.id, info.password);
           setLoading(false);
           
-        
+          if (result.success) {
+            await loadUsers();
+            setIsModalOpenEdit(false);
+          } else {
+            setError(result.error || 'Error al actualizar contraseña');
+          }
         });
         break;
         
       case 'delete':
         setFunctionToExecute(() => async (info: AuthUserData) => {
+          setLoading(true);
+          const result = await deleteAuthUser(info.id);
+          setLoading(false);
           
+          if (result.success) {
+            await loadUsers();
+            setIsModalOpenEdit(false);
+          } else {
+            setError(result.error || 'Error al eliminar usuario');
+          }
         });
         break;
     }
@@ -102,8 +137,9 @@ export default function Home() {
     });
   };
 
-  const getStatusText = () => {
-   
+  const getStatusText = (user: AuthUser) => {
+    if (user.email_confirmed_at) return "✅ Confirmado";
+    return "⏳ Pendiente";
   };
 
   return (
@@ -112,7 +148,8 @@ export default function Home() {
         <SearchBar
           className=""
           placeholder="Buscar usuario por email"
-          
+          data={rows}
+          onFilter={setFilteredRows}
         />
 
          <div className=" flex gap-x-2 items-center ">
@@ -142,12 +179,39 @@ export default function Home() {
       )}
 
       <div className="flex flex-wrap gap-6">
-       
-           
+        {filteredRows.map((user) => (
+          <Cards 
+            OpenOnEditModal={() => {handleOpenModal(true, "edit")}} 
+            onEditButton={() => handleInfoToModal(user)}  
+            OpenOnDeletetModal={() => {handleOpenModal(true, "delete")}} 
+            key={user.id}
+            label={user.email}
+            data={[
+              { label: "ID", value: user.id.substring(0, 8) + "..." },
+              { 
+                label: "Estado", 
+                value: getStatusText(user)
+              },
+              { 
+                label: "Creado", 
+                value: formatDate(user.created_at) 
+              },
+              { 
+                label: "Último acceso", 
+                value: formatDate(user.last_sign_in_at) 
+              },
+            ]}
+          />
+        ))}
        
       </div>
 
-     
+      {filteredRows.length === 0 && !loading && (
+        <div className="text-center py-12">
+          <p className="text-gray-500 text-lg">No se encontraron usuarios</p>
+          <p className="text-gray-400">Crea el primer usuario haciendo clic en Nuevo Usuario</p>
+        </div>
+      )}
 
       <Modal isOpen={isModalOpenEdit} onClose={() => setIsModalOpenEdit(false)}>
         <FormAuthUsers 

@@ -1,4 +1,65 @@
 {
-  "node": {},
+  "node": {
+    "7f197233d92c536f4fe15c35130a25cdc0dd69bf91": {
+      "workers": {
+        "app/main/ManagerUsers/page": {
+          "moduleId": "[project]/.next-internal/server/app/main/ManagerUsers/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/authUserActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "fetchAuthUsers",
+          "filename": "src/app/supabase/authUserActions.ts"
+        }
+      },
+      "layer": {
+        "app/main/ManagerUsers/page": "action-browser"
+      },
+      "exportedName": "fetchAuthUsers",
+      "filename": "src/app/supabase/authUserActions.ts"
+    },
+    "7f153acbec64f4f318f2b86ad5f129f3192785888e": {
+      "workers": {
+        "app/main/ManagerUsers/page": {
+          "moduleId": "[project]/.next-internal/server/app/main/ManagerUsers/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/authUserActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "addAuthUser",
+          "filename": "src/app/supabase/authUserActions.ts"
+        }
+      },
+      "layer": {
+        "app/main/ManagerUsers/page": "action-browser"
+      },
+      "exportedName": "addAuthUser",
+      "filename": "src/app/supabase/authUserActions.ts"
+    },
+    "7f162f80200f42be0277f1bb119171e08a35150ea5": {
+      "workers": {
+        "app/main/ManagerUsers/page": {
+          "moduleId": "[project]/.next-internal/server/app/main/ManagerUsers/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/authUserActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "updateAuthUserPassword",
+          "filename": "src/app/supabase/authUserActions.ts"
+        }
+      },
+      "layer": {
+        "app/main/ManagerUsers/page": "action-browser"
+      },
+      "exportedName": "updateAuthUserPassword",
+      "filename": "src/app/supabase/authUserActions.ts"
+    },
+    "7f13d6b7896763abe6f413dad69ce99caea134415c": {
+      "workers": {
+        "app/main/ManagerUsers/page": {
+          "moduleId": "[project]/.next-internal/server/app/main/ManagerUsers/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/authUserActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "deleteAuthUser",
+          "filename": "src/app/supabase/authUserActions.ts"
+        }
+      },
+      "layer": {
+        "app/main/ManagerUsers/page": "action-browser"
+      },
+      "exportedName": "deleteAuthUser",
+      "filename": "src/app/supabase/authUserActions.ts"
+    }
+  },
   "edge": {}
 }

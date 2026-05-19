@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-
+import { addCurrentUserAsAdmin, checkIfUserIsAdmin } from '@/app/supabase/adminSetup';
 import Button from '@/app/components/Button';
 
 export default function AdminSetupPage() {
@@ -11,15 +11,15 @@ export default function AdminSetupPage() {
 
   const handleAddAdmin = async () => {
     setLoading(true);
-  
-  
+    const res = await addCurrentUserAsAdmin();
+    setResult(res);
     setLoading(false);
   };
 
   const handleCheckAdmin = async () => {
     setLoading(true);
-
-
+    const res = await checkIfUserIsAdmin();
+    setCheckResult(res);
     setLoading(false);
   };
 

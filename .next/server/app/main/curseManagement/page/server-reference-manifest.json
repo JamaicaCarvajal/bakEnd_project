@@ -1,4 +1,65 @@
 {
-  "node": {},
+  "node": {
+    "7fdcba0030570edd7bb3d0ca4d16022a7edd1f383e": {
+      "workers": {
+        "app/main/curseManagement/page": {
+          "moduleId": "[project]/.next-internal/server/app/main/curseManagement/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/courseActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "fetchCourses",
+          "filename": "src/app/supabase/courseActions.ts"
+        }
+      },
+      "layer": {
+        "app/main/curseManagement/page": "action-browser"
+      },
+      "exportedName": "fetchCourses",
+      "filename": "src/app/supabase/courseActions.ts"
+    },
+    "7f6acea96873716f57c92f2b83c88205096905d273": {
+      "workers": {
+        "app/main/curseManagement/page": {
+          "moduleId": "[project]/.next-internal/server/app/main/curseManagement/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/courseActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "addCourse",
+          "filename": "src/app/supabase/courseActions.ts"
+        }
+      },
+      "layer": {
+        "app/main/curseManagement/page": "action-browser"
+      },
+      "exportedName": "addCourse",
+      "filename": "src/app/supabase/courseActions.ts"
+    },
+    "7fa14ac1b350c51a5e92dc443f241189d5a2919698": {
+      "workers": {
+        "app/main/curseManagement/page": {
+          "moduleId": "[project]/.next-internal/server/app/main/curseManagement/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/courseActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "updateCourse",
+          "filename": "src/app/supabase/courseActions.ts"
+        }
+      },
+      "layer": {
+        "app/main/curseManagement/page": "action-browser"
+      },
+      "exportedName": "updateCourse",
+      "filename": "src/app/supabase/courseActions.ts"
+    },
+    "7f8cf8d29548300ba33ff43ce7475e8d4e3fd447c8": {
+      "workers": {
+        "app/main/curseManagement/page": {
+          "moduleId": "[project]/.next-internal/server/app/main/curseManagement/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/supabase/courseActions.ts [app-rsc] (ecmascript)\" } [app-rsc] (server actions loader, ecmascript)",
+          "async": false,
+          "exportedName": "deleteCourse",
+          "filename": "src/app/supabase/courseActions.ts"
+        }
+      },
+      "layer": {
+        "app/main/curseManagement/page": "action-browser"
+      },
+      "exportedName": "deleteCourse",
+      "filename": "src/app/supabase/courseActions.ts"
+    }
+  },
   "edge": {}
 }

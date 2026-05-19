@@ -1,18 +1,22 @@
 'use server';
 
-
-const mockUser = {
-  id: 'mock-admin',
-  email: process.env.MOCK_USER_EMAIL ?? 'admin@mock.local',
-  user_metadata: {},
-};
+import { supabaseServer } from './supabaseServer';
+import { supabaseAdmin } from './supabaseAdmin';
+import { AuthenticationError, AuthorizationError } from './errors';
 
 /**
  * Verifica si el usuario actual está autenticado
  * @returns El user object si está autenticado, null si no
  */
 export async function requireAuth() {
-  return mockUser as any;
+  const supabase = await supabaseServer();
+  const { data: { user }, error } = await supabase.auth.getUser();
+  
+  if (error || !user) {
+    throw new AuthenticationError();
+  }
+  
+  return user;
 }
 
 /**
@@ -20,7 +24,25 @@ export async function requireAuth() {
  * @returns true si es admin, lanza error si no
  */
 export async function requireAdmin() {
-  return await requireAuth();
+  const user = await requireAuth();
+  
+  // Verificar si el usuario está en la tabla admin_users
+  const { data, error } = await supabaseAdmin
+    .from('admin_users')
+    .select('user_id')
+    .eq('user_id', user.id)
+    .maybeSingle();
+  
+  if (error) {
+    console.error('Error verificando permisos de administrador:', error);
+    throw new Error('Error verificando permisos');
+  }
+  
+  if (!data) {
+    throw new AuthorizationError();
+  }
+  
+  return user;
 }
 
 /**
@@ -28,7 +50,24 @@ export async function requireAdmin() {
  * @returns true si es admin, false si no
  */
 export async function isAdmin(): Promise<boolean> {
-  return true;
+  try {
+    const supabase = await supabaseServer();
+    const { data: { user } } = await supabase.auth.getUser();
+    
+    if (!user) {
+      return false;
+    }
+    
+    const { data } = await supabaseAdmin
+      .from('admin_users')
+      .select('user_id')
+      .eq('user_id', user.id)
+      .maybeSingle();
+    
+    return !!data;
+  } catch {
+    return false;
+  }
 }
 
 /**
@@ -36,7 +75,9 @@ export async function isAdmin(): Promise<boolean> {
  * @returns user object o null
  */
 export async function getCurrentUser() {
-  return mockUser as any;
+  const supabase = await supabaseServer();
+  const { data: { user } } = await supabase.auth.getUser();
+  return user;
 }
 
 /**

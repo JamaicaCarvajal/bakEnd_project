@@ -30,8 +30,59 @@ export default function ManageGroupStudentsModal({
   const [loading, setLoading] = useState(false);
   const [removing, setRemoving] = useState<number | null>(null);
 
+  useEffect(() => {
+    if (isOpen && groupId) {
+      loadStudents();
+    }
+  }, [isOpen, groupId]);
 
-    
+  const loadStudents = async () => {
+    setLoading(true);
+    try {
+      const { fetchGroupDetails } = await import('@/app/supabase/dashboardActions');
+      const groupDetails = await fetchGroupDetails(groupId);
+      
+      if (groupDetails && groupDetails.students) {
+        setStudents(groupDetails.students);
+      }
+    } catch (error) {
+      console.error('Error loading students:', error);
+      alert('Error al cargar estudiantes del grupo');
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleRemoveStudent = async (studentId: number) => {
+    if (!confirm('¿Estás seguro de desvincular este estudiante del grupo?')) {
+      return;
+    }
+
+    setRemoving(studentId);
+    try {
+      const { supabaseAdmin } = await import('@/lib/supabaseAdmin');
+      
+      const { error } = await supabaseAdmin
+        .from('studentgroup')
+        .delete()
+        .eq('groupid', groupId)
+        .eq('studentid', studentId);
+
+      if (error) throw error;
+
+      // Actualizar lista local
+      setStudents(prev => prev.filter(s => s.studentid !== studentId));
+      alert('✅ Estudiante desvinculado exitosamente');
+    } catch (error) {
+      console.error('Error removing student:', error);
+      alert('❌ Error al desvincular estudiante');
+    } finally {
+      setRemoving(null);
+    }
+  };
+
+  if (!isOpen) return null;
+
   return (
     <AnimatePresence>
       <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/10 bg-opacity-50 p-4">
@@ -105,7 +156,7 @@ export default function ManageGroupStudentsModal({
                       </div>
 
                       <button
-                      
+                        onClick={() => handleRemoveStudent(student.studentid)}
                         disabled={removing === student.studentid}
                         className={`
                           ml-4 px-4 py-2 rounded-lg font-semibold

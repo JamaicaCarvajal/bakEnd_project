@@ -10,6 +10,7 @@ import { School } from 'lucide-react';
 import { UserCog } from 'lucide-react';
 import { LayoutDashboard } from 'lucide-react';
 import { LogOut } from 'lucide-react';
+import { supabaseBrowser } from '../../../lib/supabaseBrowser';
 import { motion } from "framer-motion";
 
 
@@ -63,6 +64,11 @@ export default function Menu({ className ,navItems }: MenuProps) {
   const router = useRouter();
   const pathname = usePathname();
 
+  const handleLogout = async () => {
+    const supabase = supabaseBrowser();
+    await supabase.auth.signOut();
+    router.push('/');
+  };
 
   return (
     <motion.div 
@@ -122,6 +128,7 @@ export default function Menu({ className ,navItems }: MenuProps) {
         <motion.button
           whileHover={{ scale: 1.02, backgroundColor: "rgba(15, 23, 42, 0.8)" }}
           whileTap={{ scale: 0.98 }}
+          onClick={handleLogout}
           className="flex hover:text-putty-300 cursor-pointer w-full gap-5 items-center hover:bg-tangaroa-900 hover:font-bold pt-3 pb-3 pl-5 transition-all duration-300 text-white"
         >
           <LogOut />

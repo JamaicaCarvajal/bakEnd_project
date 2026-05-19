@@ -5,7 +5,7 @@ import TextBox from "./components/TextBox";
 import { useState } from "react";
 import Button from "./components/Button";
 import { useRouter } from "next/navigation";
-
+import { supabaseBrowser } from '../../lib/supabaseBrowser';
 import { motion } from "framer-motion";
 
 export default function Home() {
@@ -14,7 +14,29 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const router = useRouter();
+
   const handleLogin = async () => {
+    if (!email || !password) {
+      setError("Por favor ingresa email y contraseña");
+      return;
+    }
+    
+    setLoading(true);
+    setError(null);
+    
+    const supabase = supabaseBrowser();
+    const { error: authError } = await supabase.auth.signInWithPassword({ 
+      email, 
+      password 
+    });
+    
+    setLoading(false);
+    
+    if (authError) {
+      setError("Email o contraseña incorrectos");
+      return;
+    }
+    
     router.push("/main/dashboard");
   };
 
@@ -32,7 +54,7 @@ export default function Home() {
           transition={{ delay: 0.2, duration: 0.4 }}
         >
           <Image
-            src="/login/Logo.png"
+            src="/login/logo.png"
             alt="Logo"
             width={1000}
             height={1000}
