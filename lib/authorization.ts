@@ -12,6 +12,7 @@ export async function requireAuth() {
   const supabase = await supabaseServer();
   const { data: { user }, error } = await supabase.auth.getUser();
   
+  
   if (error || !user) {
     throw new AuthenticationError();
   }
@@ -53,6 +54,7 @@ export async function isAdmin(): Promise<boolean> {
   try {
     const supabase = await supabaseServer();
     const { data: { user } } = await supabase.auth.getUser();
+    
     
     if (!user) {
       return false;
